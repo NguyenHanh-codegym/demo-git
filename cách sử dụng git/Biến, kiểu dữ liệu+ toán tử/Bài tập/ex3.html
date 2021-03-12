@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập 2 số từ bàn phím </title>
+</head>
+<body>
+    <script>
+        /* Cách 1
+        var a = prompt( 'Hãy nhập số bị chia');
+        var b = prompt( ' Hãy nhập số chia');
+        let thương = a/b;
+
+        if(a/b==0){
+            alert('kết quả =' + thương);
+        }
+        else{
+            alert('Không chia hết'+ thương);
+        }
+
+        */
+        //Cách 2
+
+        var a = parseInt(prompt( 'Hãy nhập số bị chia'));
+        var b = parseInt(prompt( ' Hãy nhập số chia'));
+        let thương = a/b;
+
+        if(a%b!=0){
+            alert('kết quả không phải là bội số' + thương );
+        }
+        else{
+            alert('kết quả là bội số'+ thương);
+        }
+        endif
+
+    </script>
+
+
+</body>
+</html>
