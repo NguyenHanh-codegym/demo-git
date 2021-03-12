@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm hiểu var_let_nothing</title>
+</head>
+<body>
+    <script>
+        var name        = 'Tâm'; // Biến phải đặt tên liền với nhau
+        let room_name   = 'c0221A';
+        var hoVaTen     = 'Nguyễn Tài Tâm';
+        var dinhthimongmo
+
+
+        /*
+            var, let : đều là cách khai báo biên
+            let : là gtri chỉ ở trong khổi {}, và ngoài khối thì nó mất đi
+        */
+        
+
+        /*var a = 5;
+       // var b = 6;
+       // if( b > a){ 
+      //      let so_sanh = ' B lớn hơn A'; // phạm vi của nó chỉ nằm trong khối
+      Nếu không nằm trong khối thì let vẫn có thể biên dịch được
+       //     document.write( so_sanh); // với từ khóa let và var thì nó đều tồn tại
+
+       // }
+       // document.write( so_sanh);// khi nằm ngoài khối với từ khóa let,, thì nó KHÔNG tồn tại nữa
+
+*/
+        var a = 5;
+        var b = 6;
+        if( b > a){ 
+             so_sanh = ' B lớn hơn A'; // phạm vi của nó chỉ nằm trong khối
+            document.write( 'Trong khối: ' + so_sanh); // với từ khóa let và var thì nó đều tồn tại
+
+            document.write( '<hr>');
+        }
+        document.write( 'Ngoài khối:'+ so_sanh);
+
+
+    </script>
+</body>
+</html>
