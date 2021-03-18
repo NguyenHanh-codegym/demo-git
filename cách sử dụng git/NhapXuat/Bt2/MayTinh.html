@@ -8,12 +8,72 @@
         </style>  
 </head>
 <body>
-   <p> Calculator </p>
-   <input type="number" name = " ô nhập 1" value=" "> 
-   <input type="number" name = " ô nhập 2" value=" "> <br>
-    <input type="button" name = " Nút cộng" value=" Addition (+)">
-    <input type="button" name = " Nút cộng" value=" Substraction (+)">
-    <input type="button" name = " Nút cộng" value=" Mutiplication (X)">
-    <input type="button" name = " Nút cộng" value=" Division (:)">
+    <form>
+        <p> Calculator </p>
+            <input type="number" id = "input_1" name = " ô nhập 1" value=" "> 
+            <input type="number" id = "input_2" name = " ô nhập 2" value=" "> <br>
+            <input type="button" id = "cong_hai_so" name = " Nút cộng" onclick="Sum()" value=" Addition (+)">
+            <input type="button" id = "tru_hai_so"  name = " Nút trừ"  onclick="Hieu()" value=" Substraction (-)">
+            <input type="button" id = "nhan_hai_so" name = " Nút nhân" onclick="Nhan()" value=" Mutiplication (X)">
+            <input type="button" id = "chia_hai_so"  name = " Nút chia" onclick="Chia()" value=" Division (:)">
+            <p id = "kq"> </p>
+    </form>
+    <!-- <script>
+        // Bắt sự kiện button có id = "cong_hai_so" click
+         document.getElementById('cong_hai_so').addEventListener('click', function(){
+             
+            let gia_tri_a = document.getElementById(' input_1 ').value;
+            let gia_tri_b = document.getElementById(' input_2 ').value;
+
+            gia_tri_a = gia_tri_a*1;
+            gia_tri_b = gia_tri_b*1;
+
+
+            let sum = gia_tri_a + gia_tri_b;
+            let kq = " kết quả là : " + sum;
+
+            document.getElementById(' kq ').innerText = kq;
+        })
+
+
+
+    </script> -->
+
 </body>
 </html>
+<script>
+    function Sum(){
+        let a=Number(document.getElementById('input_1').value)
+        let b=Number(document.getElementById('input_2').value)
+        let Sum=a+b;
+        document.getElementById('kq').innerHTML='Kết quả là: '+Sum;
+    }
+</script>
+<script>
+    function Hieu(){
+        let a=Number(document.getElementById('input_1').value)
+        let b=Number(document.getElementById('input_2').value)
+        let Hieu = a-b;
+        document.getElementById('kq').innerHTML= 'Kết quả là:'+Hieu;
+    }
+</script>
+<script>
+    function Nhan(){
+        let a=Number(document.getElementById('input_1').value)
+        let b=Number(document.getElementById('input_2').value)
+        let Nhan = a*b;
+        a = a*1;
+        b = b*1;
+        document.getElementById('kq').innerHTML= 'Kết quả là:'+Nhan;
+    }
+</script>
+<script>
+    function Chia(){
+        let a=Number(document.getElementById('input_1').value)
+        let b=Number(document.getElementById('input_2').value)
+        let Chia = a/b;
+        a = a*1;
+        b = b*1;
+        document.getElementById('kq').innerHTML= 'Kết quả là:'+Chia;
+    }
+</script>
