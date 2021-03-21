@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td> Amount   </td>
+            <td> From Currency </td>
+            <td> To Currency</td>
+        </tr>
+        <tr>
+            <td><input id = 'so_tien' type = "number" value=""> </td>
+            <td><select id = 'From_Currency'><option>vn </option>
+                        <option> usd </option>
+                </select></td>
+            <td><select id = 'To_Currency'><option>vn</option>
+                        <option>usd</option>
+                </select></td>
+            <td> <input id ='convert' type ="button" value="Convert">   </td>
+        </tr>
+    </table>
+    <p id = 'ket_qua'></p>
+    <script>
+        // 1 usd = 23000 vnd, 1 vnd = 1/23000 usd
+
+        let convert_button = document.getElementById('convert');
+        convert_button.addEventListener('click',function(){
+
+            let so_tien = document.getElementById('so_tien').value;
+            let From_Currency = document.getElementById('From_Currency').value;
+            let To_Currency = document.getElementById('To_Currency').value;
+
+           // console.log('so_tien');
+           // console.log('From_Currency');
+           // console.log('To_Currency');
+
+            so_tien = so_tien*1;
+
+            let gia_tri_chuyen_doi = 23000;
+            //let ket_qua = so_tien/gia_tri_chuyen_doi;
+
+            //Xử lý vn -> usd
+
+            if ( From_Currency == 'vn' && To_Currency == 'usd'  ){
+                var ket_qua = so_tien/gia_tri_chuyen_doi;
+            }
+            //Xử lý usd -> vn
+            if ( From_Currency == 'usd' && To_Currency == 'vn'  ){
+                var ket_qua = so_tien*gia_tri_chuyen_doi;
+            }
+             //Xử lý usd -> usd
+             if ( From_Currency == 'usd' && To_Currency == 'usd'  ){
+                var ket_qua = so_tien;
+            }
+              //Xử lý vn -> vn
+              if ( From_Currency == 'vn' && To_Currency == 'vn'  ){
+                var ket_qua = so_tien;
+            }
+
+            document.getElementById('ket_qua').innerText = ' Kết quả là ' + ket_qua;
+
+
+
+
+        }) 
+
+    </script>
+</body>
+</html>
