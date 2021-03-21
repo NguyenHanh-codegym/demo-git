@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bắt sự kiện onchange</title>
+</head>
+<body>
+    <p>Please select a new car from list </p>
+
+    <select id = "mySelect" onchange="do_something ()">
+        <option value="BMV">        BMV </option>
+        <option value="Mecedex">    Mecedex </option>
+        <option value="Lampogini">  Lampogini</option>
+        <option value="Range rover"> Range rover</option>
+
+    </select>
+    <script>
+        function do_something(){
+            var selectedValue = document.getElementById("mySelect").value;
+            alert (selectedValue);
+        }
+    </script>
+    
+</body>
+</html>
