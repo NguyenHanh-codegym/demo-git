@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    Nhập số
+    <br>
+    <input  id = 'gia_tri_nhap' type="number" value=" ">
+    <input id = 'button' type="button" value=" Kiểm tra">
+    <script>
+        let gia_tri_nhap = document.getElementById('gia_tri_nhap').value;
+        let button = document.getElementById('button')
+        button.addEventListener('click',function(){
+
+            if (gia_tri_nhap % 2 === 0  ){
+                alert( gia_tri_nhap +'là số chẵn');
+            }else {
+                alert( gia_tri_nhap +'là số lẻ');
+            }
+
+        })
+    </script>
+</body>
+</html>
