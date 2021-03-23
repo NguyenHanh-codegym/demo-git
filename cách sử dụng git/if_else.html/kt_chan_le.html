@@ -10,14 +10,14 @@
     <input  id = 'gia_tri_nhap' type="number" value=" ">
     <input id = 'button' type="button" value=" Kiểm tra">
     <script>
-        let gia_tri_nhap = document.getElementById('gia_tri_nhap').value;
+        
         let button = document.getElementById('button')
         button.addEventListener('click',function(){
-
+            let gia_tri_nhap = parseInt(document.getElementById('gia_tri_nhap').value);
             if (gia_tri_nhap % 2 === 0  ){
-                alert( gia_tri_nhap +'là số chẵn');
+                document.write( gia_tri_nhap +'là số chẵn');
             }else {
-                alert( gia_tri_nhap +'là số lẻ');
+                document.write( gia_tri_nhap +'là số lẻ');
             }
 
         })
