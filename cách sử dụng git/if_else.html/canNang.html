@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <p> Kiểm tra chỉ số BMI </p>
+        Cân nặng (kg) <input id = "can_nang" type="number" value = ''>
+        <br>
+        Chiều cao (cm) <input id = "chieu_cao" type="number" value = ''>
+        <br>
+        <input id = "button" type="button" value=" Kiểm tra">
+      
+    </form>
+    <script>
+        let button = document.getElementById('button')
+        button.addEventListener('click', function(){
+        let can_nang = document.getElementById('can_nang').value;
+        let chieu_cao = document.getElementById('chieu_cao').value;
+        can_nang *=1;
+        chieu_cao *=1;
+        chieu_cao /=100;
+        let chi_so_BMI = can_nang / (chieu_cao * chieu_cao);
+        
+            if (chi_so_BMI < 16)
+                document.write( chi_so_BMI +" Gầy độ III");
+            else if (chi_so_BMI < 17)
+                document.write(chi_so_BMI + " Gầy độ II");
+            else if (chi_so_BMI < 18.5)
+                document.write(chi_so_BMI + " Gầy độ I");
+            else if (chi_so_BMI < 25)
+                document.write(chi_so_BMI + " Bình thường");
+
+        })
+        
+    </script>
+</body>
+</html>
