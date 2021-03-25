@@ -12,20 +12,17 @@
     <script>
         let button = document.getElementById('button')
         button.addEventListener('click',function(){
-            let nam_nhap = parseInt("document.getElementById('nam_nhap').value");
-
-            if ( nam_nhap % 4 ==0){
-                if (nam_nhap % 100 ==0){
-                    if (nam_nhap % 400 ==0){
-                        document.write( nam_nhap + ' là năm nhuận');
-                    }else {
-                    document.write( nam_nhap + ' không là năm nhuận');
-                    }
-                }else {
+            let nam_nhap = parseInt(prompt('năm nhập'));
+                
+            if ( nam_nhap % 4 ==0 && nam_nhap % 100!=0){
+                document.write( nam_nhap + ' là năm nhuận');
+            }else if (nam_nhap % 100 ==0 && nam_nhap % 400!=0){
+                document.write( nam_nhap + ' không là năm nhuận');
+            }else if (nam_nhap % 100 ==0 &&nam_nhap % 400 ==0){
                 document.write( nam_nhap + ' là năm nhuận');
             }
-            }else {
-                document.write( nam_nhap + 'không là năm nhuận');
+            else {
+                document.write( nam_nhap + ' không là năm nhuận');
             }
         })
       
