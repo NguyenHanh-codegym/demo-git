@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+                <!-- Ổi: 20000 VNĐ/kg
+            Dưa Hấu: 20000 VNĐ/kg
+            Táo: 30000 VNĐ/kg
+            Xoài: 30000 VNĐ/kg
+            Cam: 40000 VNĐ/kg
+            Chôm Chôm: 40000 VNĐ/kg
+            Măng Cụt: 50000 VNĐ/kg -->
+    <h1> Giá hoa quả </h1> <br>
+    <select id = qua >
+        <option> Ổi </option>
+        <option> Dưa hấu </option>
+        <option> Xoài </option>
+        <option> Táo </option>
+        <option> Cam </option>
+        <option> Chôm chôm </option>
+        <option> Măng cụt </option>
+    </select>
+    <input id = button type="button" value=" Kiểm tra">
+    <script>
+        let button = document.getElementById('button');
+        button.addEventListener('click',function(){
+            let qua = document.getElementById('qua').value;
+            switch (qua) {
+                case 'Ổi':
+                    document.write('20000 VNĐ/kg');
+                    break;
+                case 'Dưa hấu':
+                    document.write('20000 VNĐ/kg');
+                    break;
+                case 'Xoài':
+                    document.write('30000 VNĐ/kg');
+                    break;
+                case 'Táo':
+                    document.write('30000 VNĐ/kg');
+                    break;
+                case 'Cam':
+                    document.write('40000 VNĐ/kg');
+                    break;
+                case 'Chôm chôm':
+                    document.write('40000 VNĐ/kg');
+                    break;
+                case 'Măng cụt':
+                    document.write('50000 VNĐ/kg');
+                    break;
+                default:
+                    document.write('Không có loại quả này');
+                    break;
+            }
+        })
+
+    </script>
+</body>
+</html>
