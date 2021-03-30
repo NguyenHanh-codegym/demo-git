@@ -7,11 +7,17 @@
 	<title>Document</title>
 </head>
 
-        <body><form action="action_page.php">
-        <input type="radio" name="gender" value="male" checked> Male<br>
-        <input type="radio" name="gender" value="female"> Female<br>
-        <input type="radio" name="gender" value="other"> Other<br><br>
-        <input type="submit">
-        </form></body>
+<body>
+        // check bắt buộc 
+        <form>
+                <label for="passcode">Enter Passcode:</label>
+                <input id="passcode" 
+                       type="password" 
+                       placeholder="Your passcode" 
+                       oninput="checkPasscode();"
+                       required/>
+                <button type="submit">Submit</button>
+            </form>
+</body>
 
 </html>
