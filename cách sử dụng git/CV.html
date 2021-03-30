@@ -1,23 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+        form{width: 100%;padding: 10px;} 
+        
+        </style>
+        
 </head>
 
 <body>
-        // check bắt buộc 
+        <!-- check bắt buộc  -->
         <form>
-                <label for="passcode">Enter Passcode:</label>
-                <input id="passcode" 
-                       type="password" 
-                       placeholder="Your passcode" 
-                       oninput="checkPasscode();"
-                       required/>
-                <button type="submit">Submit</button>
-            </form>
+                <label for="ho">Họ </label>
+                <input id="ho" type="text" placeholder="Your Surname" oninput="checkSurname();" required />
+                <br>
+                <label for="name">Tên</label>
+                <input id="ten" type="name" placeholder="Your name" oninput="checkPassword();" required />
+                <br>
+                <label for="password">Mật khẩu </label>
+                <input id="mk" type="password" placeholder="Your password" oninput="checkPassword();" required />
+                <br>
+                <button id = button type="submit">Submit</button>
+        </form>
+        <script>
+                let button = document.getElementById('button');
+                button.addEventListener('click',function(){
+                        let ho = document.getElementById('ho').value;
+                        let ten = document.getElementById('ten').value;
+                        let mk = document.getElementById('mk').value;
+
+                        document.write('Tên của bạn là : ' + ho +' '+ ten );
+                        document.write('<br>');
+                        document.write('Mật khẩu của bạn là : '+ mk );
+
+                })
+        </script>
 </body>
 
 </html>
