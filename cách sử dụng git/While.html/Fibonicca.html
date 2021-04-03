@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
 </head>
+
 <body>
 
-    <!-- 10 số đầu tiên của dãy số fibonacci: 
-        0 1 1 2 3 5 8 13 21 34  -->
-    <script>
-        let number1 = 0;
-        let number2 = 1;
 
-        while (number3<10) {
-            let number3 = number1 + number2;
-            document.write(number3);
-            number3++;
-        }
+    <script>
+
+        // // Bảng cửu chương
+        // let a = 2;
+        // while (a<10) {
+        //     document.write(a);
+        //     let b =1;
+        //     while (b < 10) {
+        //         let tich = a*b;
+        //         document.write('<br>');
+        //         document.write( a + 'x' + b +'='+ tich +'<br>');
+        //         b++;
+        //     }
+        //     a++;
+        // }
+
+
+        // <!-- 10 số đầu tiên của dãy số fibonacci: 
+        // 0 1 1 2 3 5 8 13 21 34 
+        /* Phân tích a =0 ;
+         b = 1;
+         result = a +b;
+         b = result;
+
+        */
+        var a = 0;
+        var b = 1;
+
+        do {
+            var c = a + b;
+            document.write(a + '<br>' + b + '<br>'+ c);
+            
+            c++;
+
+        } while (c < 20);
+
+
+
+
     </script>
 </body>
+
 </html>
