@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let doc = 1;
+        while (doc <=5) {
+            document.write( '*');
+
+            let ngang = 1;
+            while (ngang <=9) {
+                if ( doc>1 && doc <5 && ngang <9 ){
+                    document.write('<span style ="color : red;"> * </span>');
+                }
+
+                document.write( ' *')
+                ngang++;
+            }
+            document.write('<br>');
+            doc++;
+        }
+    </script>
+</body>
+</html>
