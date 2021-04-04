@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+    td {
+        padding: 10px;
+    }
+</style>
+<body>
+    <table>
+        <tr>
+            <td>1 </td>
+            <td>2 </td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>2 </td>
+            <td>4</td>
+            <td>6 </td>
+        </tr>
+        <tr>
+            <td> 3</td>
+            <td> 6</td>
+            <td> 9</td>
+        </tr>
+        <div id = "hien_thi"></div>
+    </table>
+    <script>
+        let html_bang = '';
+        html_bang += '<table border="1">';
+            let tr = 1;
+            while (tr<=10) {
+                html_bang += '<tr>';
+                    let td = 1;
+                    while (td<=10) {
+                        html_bang += '<td>';
+                            html_bang += tr *td;
+                        html_bang += '</td>';
+                        td++;
+                    }
+
+                html_bang += '</tr>';
+                tr++;
+            }
+        html_bang += '</table>'
+        document.getElementById('hien_thi').innerHTML = html_bang;
+
+    </script>
+</body>
+</html>
