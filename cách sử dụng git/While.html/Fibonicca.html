@@ -34,20 +34,19 @@
          b = result;
 
         */
-        var a = 0;
-        var b = 1;
-
+        // var a = 0;
+        // var b = 1;
+        var i = 0;
+        var j = 1;
+        var n = 1;
+        document.write( i +'<br>' + j+ '<br>');
         do {
-            var c = a + b;
-            document.write(a + '<br>' + b + '<br>'+ c);
-            
-            c++;
-
-        } while (c < 20);
-
-
-
-
+            k = i + j;
+            i=j;
+            j=k;
+            n++;
+            document.write(k  + '<br>');
+        } while (n < 20);
     </script>
 </body>
 
