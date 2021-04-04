@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id = button type ="button" name = 'button' value="Chơi">
+    <script>
+        let button = document.getElementById('button');
+        button.addEventListener('click',function(){
+            let so_nhap = 10;
+            let gia_tri_nhap = 0;
+            let n =1;
+            while (n<=3) {
+                let gia_tri_nhap = prompt('Hãy nhập số của bạn muốn đoán')
+
+            if(gia_tri_nhap > so_nhap){
+                    alert('Hãy nhập số bé hơn');
+                }
+            else if ( gia_tri_nhap<so_nhap){
+                alert('Hãy nhập số lớn hơn ');
+            }   
+            else if (gia_tri_nhap == so_nhap){
+                alert('Chúc mừng ');
+            }
+            else if (gia_tri_nhap==3){
+                break;
+            }
+            n++;
+            }
+        // do {
+        //     let gia_tri_nhap = prompt('Hãy nhập số của bạn muốn đoán')
+
+        //     if(gia_tri_nhap > so_nhap){
+        //             alert('Hãy nhập số bé hơn');
+        //         }
+        //     else if ( gia_tri_nhap<so_nhap){
+        //         alert('Hãy nhập số lớn hơn ');
+        //     }   
+        //     else if (gia_tri_nhap == so_nhap){
+        //         alert('Chúc mừng ');
+        //     }
+        // } while (n==3);
+        //     continue;
+        })
+    </script>
+
+</body>
+</html>
