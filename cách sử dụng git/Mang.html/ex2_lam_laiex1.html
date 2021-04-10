@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <!-- Yêu cầu : 1. ô nhập <br>
+                    2. button add <br>
+                    3. button hiển thị<br>
+                    Khi user nhập vào ô nhập click vào button add sẽ hiển thị<br>
+                    popup thông báo giá trị nhập đã được add <br>
+                    click vào button hiển thị sẽ hiển thị ra doccument <br>
+                    Element 0 = 23<br>
+                    Element 1 = 45<br>
+                    Element 2 = 245<br> -->
+   
+    <input type="text" value="" id = "gia_tri_nhap" >
+    <input type="button" value="Add" id = "button_Add" > 
+    <input type="button" value="Display" id = "button_Display"> 
+    <script>
+        
+        let button_Add = document.getElementById("button_Add");
+        button_Add.addEventListener('click',function(){
+            let gia_tri_nhap = document.getElementById("gia_tri_nhap").value;
+            prompt( gia_tri_nhap + "đã được add");
+        })
+        let button_Display = document.getElementById('button_Display');
+        button_Display.addEventListener('click',function(){
+            let hop_chua = [gia_tri_nhap];
+            for (let i = 0; i < hop_chua.length; i++) {
+               document.write("Element " + i + " = " + gia_tri_nhap + "<br/>" );
+            }
+        })
+
+    </script>
+</body>
+</html>

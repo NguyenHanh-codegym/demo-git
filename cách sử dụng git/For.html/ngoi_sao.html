@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*
+            *
+            * *
+            * * *
+            * * * *
+            * * * * *
+        */
+        // for (i = 1; i<=5;i++){
+        //     for (y =0; y<i;y++){
+        //         document.write('*');
+        //     }
+        //     document.write('<br>');
+        // }
+
+
+        /*
+            * * * * *
+            * * * * 
+            * * *
+            * * 
+            * 
+            Phân tích: vòng 1 ( vòng ngoải, vòng của i): 
+                        i = 1
+                                y = 5 thỏa mãn y > i
+                                y = 4 thỏa mãn y > i
+                                y = 3 thỏa mãn y > i
+                                y = 2 thỏa mãn y > i
+                                y = 1 thỏa mãn y = i
+                        Vòng 2 : 
+                        i = 2
+                                y = 5 thỏa mãn y > i
+                                y = 4 thỏa mãn y > i
+                                y = 3 thỏa mãn y > i
+                                y = 2 thỏa mãn y > i
+                                y = 1 không thỏa mãn y = i => không hiển thị
+
+        */
+            // for(i=1; i<=5; i++){
+            //     for (y = 5; y>=i; y--){
+            //         document.write('*');
+            //     }
+            //     document.write('<br>');
+            // }
+
+
+        /*
+                    *
+                  * * 
+                * * *
+              * * * *
+            * * * * *
+        */
+            for (i = 4; i <= 5; i--) {
+                document.write(`<span style = "color : white;"> *</span>`);
+                    for (y = 1; y <= i; y++) {
+                        document.write(`*`);
+                    }
+                    document.write('<br>');
+                }
+
+
+    </script>
+</body>
+</html>
