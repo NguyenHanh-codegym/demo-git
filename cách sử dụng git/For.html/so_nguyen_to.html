@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Số nguyên tố là số lớn hơn 1 và chỉ chia hết cho 1 và chính nó.
+        Ví dụ: 2, 3, 5, 7, 11, 13, 17, … là những số nguyên tố.
+        Chú ý: Số 0 và 1 không phải là số nguyên tố. Chỉ có số 2 là số nguyên tố chẵn, 
+        tất cả các số chẵn khác không phải là số nguyên tố vì chúng chia hết cho 2.
+
+        Phân tích: Giả sửa trong dãy số tự nhiên: 1,2,3,4,5,6,7,8,9,10
+            step 1: Trong 10 số này, số nào là số nguyên tố
+            step 2 : tìm ra ước số và loại bỏ
+            ở đây ta có 4: là ước của 2
+                        6 là ước của 2 và 3
+                        8 là ước của 2 và 4
+                        10 là ước của 2 và 5
+            Nếu số nào chỉ chia hết cho 1 và chính nó : tức là nó chỉ có 1 ước số thôi, không có 2 ước số
+             ( tức là số lần ước số =1)
+        */
+        let count_so_nguyen_to = 0;
+        for ( i =2; i <=100; i++){
+           let count_uoc_so = 0;
+            for (y =2 ; y<=100;y++){
+                if(i%y==0 && y<=i){
+                    count_uoc_so++;
+                }
+            }
+            if (count_uoc_so==1){
+                count_so_nguyen_to++;
+                document.write(i + ' là số nguyên tố' + '<br>');
+
+            }
+        }
+    </script>
+</body>
+</html>
