@@ -11,7 +11,9 @@
                     2. button add <br>
                     3. button hiển thị<br>
                     Khi user nhập vào ô nhập click vào button add sẽ hiển thị<br>
-                    popup thông báo giá trị nhập đã được add <br>
+                    popup thông báo : Element: 23 đã được add vào index 0
+                    add lần 2         Element: 45 đã được add vào index 1
+
                     click vào button hiển thị sẽ hiển thị ra doccument <br>
                     Element 0 = 23<br>
                     Element 1 = 45<br>
@@ -24,14 +26,21 @@
         
         let button_Add = document.getElementById("button_Add");
         button_Add.addEventListener('click',function(){
-            let gia_tri_nhap = document.getElementById("gia_tri_nhap").value;
-            prompt( gia_tri_nhap + "đã được add");
+            let gia_tri_nhap =0;
+            let array=Array();
+          Array[gia_tri_nhap]  = parseInt(document.getElementById("gia_tri_nhap").value);
+
+           alert( "Element" + Array[gia_tri_nhap] + " đã được add index " + gia_tri_nhap );
+           gia_tri_nhap++;
+
+           document.getElementById("gia_tri_nhap").value = "";
         })
         let button_Display = document.getElementById('button_Display');
         button_Display.addEventListener('click',function(){
-            let hop_chua = [gia_tri_nhap];
-            for (let i = 0; i < hop_chua.length; i++) {
-               document.write("Element " + i + " = " + gia_tri_nhap + "<br/>" );
+            for (let i = 0; i < array.length; i++) {
+
+               document.write("Element " + gia_tri_nhap
+                + " = " + Array[gia_tri_nhap] + "<br/>" );
             }
         })
 
