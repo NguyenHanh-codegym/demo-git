@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*Viết một chương trình JavaScript
+         để tìm một giá tri được nhập vào từ hộp thoại có nằm trong mảng hay không. 
+         Nếu có in ra vị trí của phần tử đó.
+        */
+
+        let gia_tri_nhap = parseInt(prompt('Hãy nhập giá trị vào mảng'));
+
+        let mang = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        for (let i = 0; i <= mang.length; i++) {
+            if (gia_tri_nhap == mang[i]) {
+                document.write('Vị trí của phần tử đó là ' + mang[i]);
+            }
+            else {
+                document.write("Không tìm thấy vị trí nào phù hợp");
+            } break;
+        }
+    </script>
+</body>
+
+</html>
