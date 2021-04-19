@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
- <!-- Yêu cầu : 1. ô nhập <br>
+ <!--  Yêu cầu : 1. ô nhập <br>
                     2. button add <br>
                     3. button hiển thị<br>
                     Khi user nhập vào ô nhập click vào button add sẽ hiển thị<br>
@@ -17,7 +17,7 @@
                     click vào button hiển thị sẽ hiển thị ra doccument <br>
                     Element 0 = 23<br>
                     Element 1 = 45<br>
-                    Element 2 = 245<br> -->
+                    Element 2 = 245<br> 
    
     <input type="text" value="" id = "gia_tri_nhap" >
     <input type="button" value="Add" id = "button_Add" > 
@@ -43,6 +43,30 @@
                 + " = " + Array[gia_tri_nhap] + "<br/>" );
             }
         })
+
+    </script> -->
+
+    <input type="text" value="" id = "gia_tri_nhap" >
+    <input type="button" value="Add" id = "button_Add" > 
+    <input type="button" value="Display" id = "button_Display"> 
+    <div id = result ></div>
+
+    <script> 
+        let mang = [];
+        let button_Add = document.getElementById('button_Add');
+        button_Add.addEventListener('click',function(){
+            let gia_tri_nhap = document.getElementById('gia_tri_nhap').value;
+            mang.push(gia_tri_nhap)
+            alert(`Element ${gia_tri_nhap} added at ${mang.length-1}`);
+        });
+        document.getElementById('button_Display').addEventListener('click',function(){
+            let result = document.getElementById('result').value;
+            let p_html ='';
+            for (let i = 0; i < mang.length; i++) {
+                p_html = p_html+ `Element ${i} =${mang[i]} <br>` ;   
+            }
+            document.getElementById("result").innerHTML = p_html;
+        }) 
 
     </script>
 </body>

@@ -1,82 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title></title>
+    <title></title>
 </head>
+
 <body>
-	<h1>Tính điểm ĐH khối D</h1>
-        Môn Toán <input id = math type="text" value=""><br><br>
-        Môn Văn <input id = Literature type="text" value=""><br><br>
-        Môn Anh <input id = English type="text" value=""><br><br>
-        Khu vực <select id = 'KV' >
-            <option value="KV1"> KV1 </option>
-	            <option value="KV2"> KV2 </option>
-	            <option value="KV2-NT"> KV2-NT </option>
-	            <option value="KV3"> KV3 </option>
+    <form action="" method="POST" onsubmit="return validate()">
+        <div class="register">
+            <h1>Đăng ký</h1>
+            <p>Vui lòng điền thông tin để đăng ký</p>
+   
+            <label for="username"><b>Tên đăng nhập</b></label> 
+            <input type="text" placeholder="Họ và tên" name="username" id="username"><br>
 
-        </select> <br><br>
-        <input  id = button type="button" value="Tính điểm">
-        <script>
-            let button = document.getElementById('button')
-            button.addEventListener('click',function(){
+            <label for="password"><b>Mật khẩu</b></label> 
+            <input type="password" placeholder="******" name="password" id="password"><br>
 
-            	//kiểm tra click
-            	console.log('click');
-          
-                var math        = parseInt(document.getElementById('math').value); 
-                var Literature  = parseInt(document.getElementById('Literature').value); 
-                var English     = parseInt(document.getElementById('English').value);
-                //let KV          = parseInt(document.getElementById('KV').value);
-                let KV          = document.getElementById('KV').value;
+            <label for="password-repeat"><b>Nhập lại mật khẩu</b></label>
+            <input type="password" placeholder="******" name="password-repeat" id="password-repeat"><br>
+        
+            <button type="submit" class="submit">Đăng ký</button>
+        </div> 
+        <div class="register login"></div>
+    </form>
+    <script>
+        function validate() {
+            var u = document.getElementById("username").value;
+            var p1 = document.getElementById("password").value;
+            var p2 = document.getElementById("password-repeat").value;
 
-                
+            if (u == "") {
+                alert("Vui lòng nhập tên!");
+                return false;
+            }
+            if (p1 == "") {
+                alert("Vui lòng nhập mật khẩu!");
+                return false;
+            }
+            if (p2 == "") {
+                alert("Vui lòng xác minh mật khẩu!");
+                return false;
+            }
 
-                let sum = math + Literature + English ;
+            alert("Xin hãy điền đúng thông tin!")
 
-                //kiểm tra xem có giá trị hay chưa
-
-                console.log(sum);//15
-                console.log(KV);//đang bị NaN
-
-                //nhận thấy rằng dùng select mà option ko có thuộc tính value để hiển thị giá trị
-                /*
-                sửa lại thành
-				<option value="KV1"> KV1 </option>
-	            <option value="KV2"> KV2 </option>
-	            <option value="KV2-NT"> KV2-NT </option>
-	            <option value="KV3"> KV3 </option>
-
-	            và khi lấy được giá trị thì bản thân nó là chuỗi, ko nên dùng parseInt
-
-                */
-
-    
-                let KV1 = sum + 0.75;
-                let KV2 = sum + 0.25;
-                let KV2NT = sum +0.5;
-
-                switch (KV) {
-                    case 'KV1':
-                    document.write('Tổng điểm ĐH khối D của bạn là '+ KV1);
-                        break;
-                    case 'KV2':
-                    document.write('Tổng điểm ĐH khối D của bạn là '+ KV2);
-                        break;
-                        case 'KV2NT':
-                    document.write('Tổng điểm ĐH khối D của bạn là '+ KV2NT);
-                        break;
-                    case 'KV3':
-                    document.write('Tổng điểm ĐH khối D của bạn là '+ sum );
-                        break;
-                    default:
-                    
-                        break;
-                }
-
-                
-
-               
-            })
-        </script>
+            return true;
+        }
+    </script>
 </body>
+
 </html>

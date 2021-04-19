@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo form </title>
+    <style>
+        .wufoo {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <form method="get" action="simpleform.html" class="wufoo" ;>
+        <h2>Order Form</h2>
+        <p>What would you like to buy?</p>
+        <select id = select_value>
+            <option >A</option>
+            <option>B (+ 0.5$)</option>
+            <option>C (+ 0.5$)</option>
+        </select>
+        <p>How many would you like to order?</p>
+        <input type="radio" name="rd" /> 1 - $10 <br />
+        <input type="radio" name="rd" /> 2 - $20 <br />
+        <input type="radio" name="rd" /> 3 - $25 <br />
+        <p>Name <span style="color: red">*</span> </p>
+        <input type="text" name="firstname" placeholder="FirstName" size="15" />
+        <input type="text" name="lastname" placeholder="LastName" size="15" />
+        <p>Email</p>
+        <input type="text" name="email" size="35" />
+        <p>Phone Number</p>
+        <input type="text" name="phone1" size="5" /> -
+        <input type="text" name="phone2" size="5" /> -
+        <input type="text" name="phone3" size="5" />
+        <p><input id = button_Add type="button" name="btSubmit" value="Add" /></p>
+    </form>
+    <table>
+        <div id="hien_thi"></div>
+    </table>
+    <script>
+        let mang = [];
+        let button_Add = document.getElementById('button_Add');
+        button_Add.addEventListener('click', function () {
+            let select_value = document.getElementById('select_value').value;
+            mang.push(select_value)
+            alert(`Element ${select_value} added at ${mang.length - 1}`);
+        });
+        document.getElementById('button_Display').addEventListener('click', function () {
+            let result = document.getElementById('result').value;
+            let p_html = '';
+            for (let i = 0; i < mang.length; i++) {
+                p_html = p_html + `Element ${i} =${mang[i]} <br>`;
+            }
+            document.getElementById("result").innerHTML = p_html;
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table>
+        <div id="hien_thi"></div>
+    </table>
+    <script>
+        let table_html = '<table border = "1">';
+
+        for (let tr = 1; tr <= 8; tr++) {
+            table_html += '<tr>';
+            for (td = 1; td <= 9; td++) {
+                table_html += '<td>';
+                  table_html += tr + "x"+td +"="+ tr*td;
+                // for (i = 1; i <= 9; i++) {
+                //     for (y = 1; y <= 10; y++) {
+                //         document.write(i + "x" + y + "=" + i * y + "<br>");
+                //     }
+                //     document.write("<br>");
+                // }
+            }
+            table_html += '</td>';
+        }
+        table_html += '</tr>';
+        table_html += '</table>';
+        document.getElementById('hien_thi').innerHTML = table_html;
+    </script>
+</body>
+
+</html>
