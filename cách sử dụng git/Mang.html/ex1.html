@@ -15,24 +15,26 @@
 
 <body>
     <input type="text" id="txtValue" />
-    <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();" />
-    <input type="button" id="btnDisplay" value="Display" onclick="display_array();" />
-    <div id="result"></div>
+    <input type="button" id="Add" value="Add" onclick="add();" />
+    <input type="button" id="Display" value="Display" onclick="display();" />
+    <div id="result_add"></div>
+    <div id="result_display"></div>
     <script>
         let x = 0;
         let array = Array();
-        function add_element_to_array() {
-            array[x] = document.getElementById("txtValue").value;
-            alert("Element: " + array[x] + " Added at index " + x);
+        function add() {
+            let d = "<hr/>";
+                array[x] = document.getElementById("txtValue").value;
+            d = "Element: " + array[x] + " Added at index " + x + "<br/>";
             x++;
-            document.getElementById("txtValue ").value = "";
+            document.getElementById("result_add").innerHTML = d;
         }
-        function display_array() {
+        function display() {
             let e = "<hr/>";
             for (let i = 0; i < array.length; i++) {
                 e += "Element " + i + " = " + array[i] + "<br/>";
             }
-            document.getElementById("result").innerHTML = e;
+            document.getElementById("result_display").innerHTML = e;
         }
     </script>
 
