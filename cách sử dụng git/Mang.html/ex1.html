@@ -24,9 +24,11 @@
         let array = Array();
         function add() {
             let d = "<hr/>";
+            for (let y = 0; y < array.length; y++) {
                 array[x] = document.getElementById("txtValue").value;
-            d = "Element: " + array[x] + " Added at index " + x + "<br/>";
-            x++;
+                d = "Element: " + array[x] + " Added at index " + x + "<br/>";
+                x++;
+            }
             document.getElementById("result_add").innerHTML = d;
         }
         function display() {
