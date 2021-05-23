@@ -6,22 +6,20 @@ let danh_sach = [
 ];
 function hien_thi_danh_sach() {
 
-    alert('a');
-    
-    // let list_hien_thi = '';
-    // list_hien_thi += '<tr>';
-    // list_hien_thi += '<td> 1 </td>';
-    // list_hien_thi += '<td> Nguyễn Văn A </td>';
-    // list_hien_thi += '<td> 0123456000 </td>';
-    // list_hien_thi += '<td> <span>Sửa</span> | <span>Xóa</span> </td>';
+    let table_html = '';
+    table_html += '<tr>';
+    table_html += '<td> 3 </td>';
+    table_html += '<td> Nguyễn Văn A </td>';
+    table_html += '<td> 0123456000 </td>';
+    table_html += '<td> <span>Sửa</span> | <span>Xóa</span> </td>';
 
-    // let tbody = document.getElementById('danh_sach');
-    // tbody.innerHTML = list_hien_thi;
+    let tbody = document.getElementById('list');
+    tbody.innerHTML = table_html;
 
 }
     
 // console.log(danh_sach);
-    // hien_thi_danh_sach();
+    hien_thi_danh_sach();
 
 //     let nut_dang_ki = document.getElementById('nut_dang_ki');
 //     nut_dang_ki.addEventListener('click', function () {

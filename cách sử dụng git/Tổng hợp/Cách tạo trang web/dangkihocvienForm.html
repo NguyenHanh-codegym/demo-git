@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí học viên</title>
+    <style>
+        titl {
+            text-align: center;
+        }
+
+        fieldset {
+            width: 50%;
+            margin-left: 22%;
+            background-color: burlywood;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="register.html" name="dangkihocvienForm" method="POST">
+        <fieldset width: 30%;>
+            <p style="background-color: turquoise; text-align: left; color: blue;"> <strong>ĐĂNG KÍ HỌC VIÊN</strong>
+            </p><br>
+            <table>
+                <tr>
+                    <td> Họ và tên</td>
+                    <td> <input type="text" name="h&t" value="" size="30"> <br></td>
+                </tr>
+                <tr>
+                    <td>Ngày sinh</td>
+                    <td><input type="text" name="ns" value="" size="15"> <br></td>
+                </tr>
+                <tr>
+                    <td>Giới tính</td>
+                    <td><input type="radio" name="bt" value=" Nam "> Nam
+                        <input type="radio" name="bt" value=" Nữ "> Nữ <br></td>
+                </tr>
+                <tr>
+                    <td>Địa chỉ</td>
+                    <td><textarea cols="20" row="4"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Lớp</td>
+                    <td><select name="chonlop">
+                        <option value=" chonlop ">-Chọn Lớp-</option>
+                        
+                    </select>
+                    </td>
+                 </tr>
+                <tr>
+                    <td>Email </td>
+                        <td><input type="text" name="email" value="" size="20"> <br> </td>
+                </tr>
+                <tr>
+                    <td>Điện thoại</td>
+                    <td>  <input type="text" name="Điện thoại" value="" size="20"> <br> </td> 
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="button" name="bt" value="Đăng kí">
+                        <input type="button" name="bt" value="Sửa">
+                        <input type="button" name="bt" value="Xóa">
+                    </td>
+                </tr>
+            </table>
+
+</body>
+
+</html>
