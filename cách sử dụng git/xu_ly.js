@@ -7,7 +7,7 @@ let danh_sach = [
 function hien_thi_danh_sach() {
     // var bien_cuc_bo = a;
     // // console.log('hien_thi_danh_sach');
-    // // console.log('danh_sach');
+    console.log('danh_sach');
     let table_html = '';
     for (let i = 0; i < danh_sach.length; i++) {
         // console.log('hien_thi_danh_sach');

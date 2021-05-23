@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí học viên</title>
+    <style>
+        titl {
+            text-align: center;
+        }
+
+        fieldset {
+            width: 50%;
+            margin-left: 22%;
+            background-color: burlywood;
+            color: blue;
+        }
+    </style>
+    <script src="xuly.js">
+    </script>
+</head>
+
+<body>
+    <form action="register.html" name="dangkihocvienForm" method="POST">
+        <fieldset width: 30%;>
+            <p style="background-color: turquoise; text-align: center; color: blue;"> <strong>ĐĂNG KÍ HỌC VIÊN</strong>
+            </p><br>
+            <table>
+                <tr>
+                    <td>MSV</td>
+                    <td><input type="text" name="ma_sv" value="" size="15"> <br></td>
+                </tr>
+                <tr>
+                    <td> Họ và tên</td>
+                    <td> <input type="text" name="h&t" value="" size="30"> <br></td>
+                </tr>
+                <tr>
+                    <td>Email </td>
+                    <td><input type="text" name="email" value="" size="20"> <br> </td>
+                </tr>
+                <tr>
+                    <td>Điện thoại</td>
+                    <td> <input type="text" name="Điện thoại" value="" size="20"> <br> </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="button" name="bt" value="Đăng kí">
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <table border="1">
+                <th>MSV</th>
+                <th>Họ và tên </th>
+                <th>Số điện thoại </th>
+                <th>Thao tác </th>
+                <tbody id="danh_sach">
+                    <tr>
+                        <td>1</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>0987567243</td>
+                        <td><span>Sửa</span>|<span>Xóa</span></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Nguyễn Văn B</td>
+                        <td>0987567001</td>
+                        <td><span>Sửa</span>|<span>Xóa</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </body>
+
+</html>

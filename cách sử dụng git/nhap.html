@@ -26,7 +26,7 @@
     }
     </script> -->
 
-    <p> Sample Screen :</p>
+    <!-- <p> Sample Screen :</p>
 <input id = "text" type="text">
 <button onclick="Add()">Add</button>
 <button onclick="Display()">Display</button>
@@ -46,10 +46,133 @@
       document.getElementById('text').value;
       console.log(document.getElementById('text').value);
     }
+</script> -->
+
+    <!-- <script>
+    // Tạo mảng 2 chiều
+
+    var cities = [
+        ['HaNoi0','HaNoi1','HaNoi2','HaNoi3',], 
+        ['SaiGon0','SaiGon1','SaiGon2','SaiGon3',],
+        ['TPHCM0','TPHCM1','TPHCM2','TPHCM3',],
+        ['DaNang0','DaNang1','DaNang2','DaNang3',]
+    ];
+    var text = cities.join("--");
+
+    for (let i = 0; i < cities.length; i++) {
+     for (let j = 0; j < cities[i].length; j++) {
+        for (let k = 0; k < cities[i][j].length; k++) {
+           for (let l = 0; l < cities[i][j][k].length; l++) {
+            document.write(cities[i][j][k][l]);
+               
+           }
+           
+        }
+        
+     }
+        document.write('<hr>');
+    }
 
 
-</script>
+ 
+</script> -->
 
+    <!-- <input type=button name=welcome value="Welcome" onclick="HienThi()">
+   <input type=text name= msg value="Welcome to JavaScript" size=30>
+
+
+    <Script Language="JavaScript">
+        function HienThi() // Khai báo một hàm tên là HienThi
+        {
+           alert(msg.value); // Lấy nội dung trong text box và hiển thị
+            alert("Bạn hãy nhập vào ô text và thử lại !");
+        }
+
+    </Script> -->
+
+
+    <!-- <script>
+        // var D = new Date();
+        // // document.title = "Bây giờ là: " + D.getHours() + " giờ " + D.getMinutes() + " phút.";
+
+        var D = new Date();
+        var NamSinh, NamHienTai;
+        NamHienTai = D.getFullYear(); // Lưu năm hiện tại vào biến
+        NamSinh = prompt("Bạn sinh năm bao nhiêu ? ", "");
+        do {
+            alert("Bạn chưa sinh ra. Hãy nhập lại năm sinh : ");
+        } while (NamSinh > NamHienTai);
+        break;
+        alert("Tuổi của bạn bây giờ là : " + (NamHienTai - NamSinh))
+
+    </script> -->
+    <!-- 
+    <script language="JavaScript">
+        var D = new Date();
+        var NamSinh, NamHienTai;
+        NamHienTai = D.getFullYear(); //Lưu năm hiện tại vào biến
+        do {
+            NamSinh = prompt("Bạn sinh năm bao nhiêu : ", "");
+        } while (parseInt(NamSinh) > NamHienTai); //Nhập lại nếu Năm sinh>năm hiện tại
+        alert("Tuổi của bạn bây giờ là : " + (NamHienTai - NamSinh));
+    </script> -->
+    <!-- 
+    <script>
+        var LuaChon;
+        LuaChon = prompt("Bạn hãy nhập vào một số để mở trang web: ", 1);
+        switch (LuaChon) {
+            case "1": window.open("https://quantrimang.com"); break;
+            case "2": window.open("https://download.com.vn"); break;
+            case "3": window.open("https://vndoc.com"); break;
+            default: window.open("https://meta.vn");
+        }
+    </script> -->
+
+    <!-- <script>
+        var SoLuong, x;
+        var DS = new Array(100); //Khai báo mảng DS, có thể lưu tối đa là 100 phẩn tử
+        SoLuong = prompt("Bạn cần nhập bao nhiêu người: ", 5);
+        for (i = 0; i < SoLuong; i++) {
+            DS[i] = prompt("Nhập vào họ tên: ", "");
+        }
+        console.log(DS);
+        //Gọi hàm sort của đối tượng mảng DS để sắp xếp
+        DS.sort();
+        //Hiển thị kết quả sau khi sắp (sort)
+        document.write("<h1>Danh sách đã sắp xếp là </h1>");
+        for (x in DS) /* Nên sử dụng cấu trúc for … in này để duyệt mảng */ {
+            document.write(DS[x]);
+            document.write("<BR>"); // Xuống dòng
+        }
+    </script> -->
+
+    <!-- <script language="JavaScript">
+        function KiemTra()
+        {
+        if (NoiDung.value.length > 10) alert("Bạn đã gõ quá số ký tự cho phép!");
+        SoKyTu.value = NoiDung.value.length; // Hiển thị số ký tự trong textbox SoKyTu
+        }
+        </script>
+        <body style="font-family:arial">
+        Số ký tự đã gõ: <input type="text" name="SoKyTu" onkeyup="KiemTra()"> <BR>
+        <textarea name="NoiDung" cols=50 rows="10" onKeyUp="KiemTra();"> </textarea> -->
+
+    <p>Click the button to add elements to the array.</p>
+
+    <button onclick="myFunction()">Đăng kí</button>
+
+    <p id="demo"></p>
+
+    <script>
+        var student_list = [];
+        document.getElementById("demo").innerHTML = student_list;
+    
+        function myFunction() {
+            student_list.splice(5, 0, "2", "Nguyễn Văn B","029876382","Phú Thọ") ;
+            
+                 document.getElementById("demo").innerHTML = student_list;
+        }
+    </script>
 </body>
 
 </html>
