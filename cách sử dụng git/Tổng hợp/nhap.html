@@ -173,6 +173,34 @@
                  document.getElementById("demo").innerHTML = student_list;
         }
     </script>
+        function validate() {
+    
+            if (document.dangkihocvienForm.ma_sv.value == "") {
+                alert("Please provide your student code!");
+                document.dangkihocvienForm.ma_sv.focus();
+                return false;
+            }
+            if (document.dangkihocvienForm.h&t.value == "") {
+                document.write("Please provide your surname!");
+                document.dangkihocvienForm.h&t.focus();
+                return false;
+            }
+            if (document.dangkihocvienForm.email.value == "") {
+                alert("Please provide your Email!");
+                document.dangkihocvienForm.email.focus();
+                return false;
+            }
+            if (document.dangkihocvienForm.phone.value == "") {
+                alert("Please provide your phone number!");
+                document.dangkihocvienForm.phone.focus();
+                return false;
+            }
+            return (true);
+        }
+
+
+
+    
 </body>
 
 </html>

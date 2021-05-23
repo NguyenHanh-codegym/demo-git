@@ -1,51 +1,41 @@
-let danh_sach = [
-    ['1', 'Nguyễn Văn A', '0123456000'],
-    ['2', 'Nguyễn Văn B', '0123456001'],
-    ['3', 'Nguyễn Văn C', '0123456002'],
-    ['4', 'Nguyễn Văn D', '0123456003']
-];
+let list = [];
 function hien_thi_danh_sach() {
 
     let table_html = '';
-    table_html += '<tr>';
-    table_html += '<td> 3 </td>';
-    table_html += '<td> Nguyễn Văn A </td>';
-    table_html += '<td> 0123456000 </td>';
-    table_html += '<td> <span>Sửa</span> | <span>Xóa</span> </td>';
+    for (let i = 0; i < list.length; i++) {
+        table_html += "<tr>";
+        table_html += `<td>${list[i][0]} </td>`;
+        table_html += `<td>${list[i][1]} </td>`;
+        table_html += `<td>${list[i][2]} </td>`;
+        table_html += `<td>${list[i][3]} </td>`;
+        table_html += '<td> <span>Sửa</span> | <span>Xóa</span></td>';
+        table_html += '</tr >';
+
+    }
 
     let tbody = document.getElementById('list');
     tbody.innerHTML = table_html;
 
 }
+
+hien_thi_danh_sach();
+
+function insert() {
+    let student_code = document.getElementById('student_code');
+    let surname = document.getElementById('surname');
+    let phone_number = document.getElementById('phone_number');
+    let email = document.getElementById('email');
+
     
-// console.log(danh_sach);
+    let student_code_value = student_code.value;
+    let surname_value = surname.value;
+    let phone_number_value = phone_number.value;
+    let mail_value = email.value;
+function display_student(student_code_value,surname_value,mail_value,phone_number_value) {
+
+    let display_content = [student_code_value,surname_value,mail_value,phone_number_value];
+    list.push(display_content);
     hien_thi_danh_sach();
-
-//     let nut_dang_ki = document.getElementById('nut_dang_ki');
-//     nut_dang_ki.addEventListener('click', function () {
-
-//         let ma_sv = document.getElementById('ma_sv');
-//         let ho_ten = document.getElementById('ho_ten');
-//         let so_dien_thoai = document.getElementById('so_dien_thoai');
-
-//         let gia_tri_ma_sv = ma_sv.value;
-//         let gia_tri_ho_ten = ho_ten.value;
-//         let gia_tri_so_dien_thoai = so_dien_thoai.value;
-//         // console.log(gia_tri_ma_sv)
-//         them_sinh_vien(gia_tri_ma_sv, gia_tri_ho_ten, gia_tri_so_dien_thoai);
-//     })
-// }
-// function them_sinh_vien(ma_sv, ho_ten, so_dien_thoai) {
-//     let thong_tin_sv = [ma_sv, ho_ten, so_dien_thoai];
-//     // console.log(thong_tin_sv);
-//     danh_sach.push(thong_tin_sv);
-//     console.log(danh_sach);
-
-
-function sua_sinh_vien() {
-
 }
-function xoa_sinh_vien() {
-
-}
-
+display_student(student_code_value,surname_value,mail_value,phone_number_value) 
+};

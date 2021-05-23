@@ -7,48 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng kí học viên</title>
     <style>
-        titl {
+        title {
             text-align: center;
         }
 
         fieldset {
             width: 50%;
+            height: 1000px;
             margin-left: 22%;
             background-color: burlywood;
             color: blue;
         }
+
+        input[type=text]:focus {
+            background-color: lightblue;
+        }
     </style>
-    <script src="xuly.js">
-    </script>
+
 </head>
 
 <body>
-    <form action="register.html" name="dangkihocvienForm" method="POST">
-        <fieldset width: 30%;>
+    <form action="register.html" name="dangkihocvienForm" method="POST" onsubmit = "return validateForm()">
+        <fieldset>
             <p style="background-color: turquoise; text-align: center; color: blue;"> <strong>ĐĂNG KÍ HỌC VIÊN</strong>
             </p><br>
             <table>
                 <tr>
                     <td>MSV</td>
-                    <td><input type="text" name="ma_sv" value="" size="15"> <br></td>
+                    <td><input type="text" name="ma_sv" value="" size="15" id = "student_code"> <br></td>
                 </tr>
                 <tr>
                     <td> Họ và tên</td>
-                    <td> <input type="text" name="h&t" value="" size="30"> <br></td>
+                    <td> <input type="text" name="h&t" value="" size="30" id = "surname"> <br></td>
                 </tr>
                 <tr>
                     <td>Email </td>
-                    <td><input type="text" name="email" value="" size="20"> <br> </td>
+                    <td><input type="text" name="Email" value="" size="20" id = "email"> <br> </td>
                 </tr>
                 <tr>
                     <td>Điện thoại</td>
-                    <td> <input type="text" name="Điện thoại" value="" size="20"> <br> </td>
+                    <td> <input type="text" name="phone" value="" size="20" id = "phone_number"> <br> </td>
                 </tr>
                 <tr>
                     <td>
                     </td>
                     <td>
-                        <input type="button" name="bt" value="Đăng kí">
+                        <input type="button" name="bt" value="Đăng kí" onclick="insert()">
                     </td>
                 </tr>
             </table>
@@ -59,7 +63,7 @@
                 <th>Địa chỉ Email </th>
                 <th>Số điện thoại </th>
                 <th>Thao tác </th>
-                <tbody id ="list">
+                <tbody id="list">
                     <tr>
                         <td>1</td>
                         <td>Nguyễn Văn A</td>
@@ -76,6 +80,8 @@
                     </tr>
                 </tbody>
             </table>
-        </body>
+            <script src="xuly.js">
+            </script>
+</body>
 
 </html>
