@@ -26,16 +26,62 @@ function insert() {
     let phone_number = document.getElementById('phone_number');
     let email = document.getElementById('email');
 
+    // var ma_sv_name = document.dangkihocvienForm.ma_sv.value;
+    // var surname = document.dangkihocvienForm.h&t.value;
+    // var Email_name = document.dangkihocvienForm.Email.value;
+    // var phone_name = document.dangkihocvienForm.phone.value;
+    var status = false;
+
     
+
     let student_code_value = student_code.value;
     let surname_value = surname.value;
     let phone_number_value = phone_number.value;
     let mail_value = email.value;
-function display_student(student_code_value,surname_value,mail_value,phone_number_value) {
+    function display_student(student_code_value, surname_value, mail_value, phone_number_value) {
 
-    let display_content = [student_code_value,surname_value,mail_value,phone_number_value];
-    list.push(display_content);
-    hien_thi_danh_sach();
-}
-display_student(student_code_value,surname_value,mail_value,phone_number_value) 
+        let display_content = [student_code_value, surname_value, mail_value, phone_number_value];
+        list.push(display_content);
+        hien_thi_danh_sach();
+    }
+    display_student(student_code_value, surname_value, mail_value, phone_number_value)
 };
+
+function validate() {
+
+    if (student_code.value.length < 1) {
+        document.getElementById("msv_er_msg").innerHTML =
+            "Please enter your student code";
+            console.log(student_code);
+        status = false;
+    } else {
+        document.getElementById("msv_er_msg").innerHTML =
+            " ";
+        status = true;
+    }
+    if (surname.length < 1) {
+        document.getElementById("surname_er_msg").innerHTML =
+            "Please enter your Surname ";
+        status = false;
+    } else {
+        document.getElementById("surname_er_msg").innerHTML =
+            " ";
+    }
+    if (email.length < 1) {
+        document.getElementById("email_er_msg").innerHTML =
+            "Please enter your Email ";
+        status = false;
+    } else {
+        document.getElementById("email_er_msg").innerHTML =
+            " ";
+    }
+    if (phone_number.length < 1) {
+        document.getElementById("phone_er_msg").innerHTML =
+            "Please enter your Phone ";
+        status = false;
+    } else {
+        document.getElementById("surname_er_msg").innerHTML =
+            " ";
+    }
+    return status;
+}
