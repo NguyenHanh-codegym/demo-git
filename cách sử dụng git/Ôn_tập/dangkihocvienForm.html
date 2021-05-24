@@ -27,38 +27,38 @@
 </head>
 
 <body>
-    <form action="register.html" name="dangkihocvienForm" method="POST" onsubmit = "return validateForm()">
+    <form action="register.html" name="dangkihocvienForm" method="POST" onsubmit="return validateForm()">
         <fieldset>
             <p style="background-color: turquoise; text-align: center; color: blue;"> <strong>ĐĂNG KÍ HỌC VIÊN</strong>
             </p><br>
             <table>
                 <tr>
-                    <td>MSV</td>
-                    <td><input type="text" name="ma_sv" value="" size="15" id = "student_code"> <br></td>
+                    <th>MSV</th>
+                    <td><input type="text" name="ma_sv" value="" size="15" id="student_code"> <br></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td><span id="msv_er_msg"></span></td>
                 </tr>
                 <tr>
-                    <td> Họ và tên</td>
-                    <td> <input type="text" name="h&t" value="" size="30" id = "surname"> <br></td>
+                    <th> Surname</th>
+                    <td> <input type="text" name="h&t" value="" size="30" id="surname"> <br></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td><span id="surname_er_msg"></span></td>
                 </tr>
                 <tr>
-                    <td>Email </td>
-                    <td><input type="text" name="Email" value="" size="20" id = "email"> <br> </td>
+                    <th>Email </th>
+                    <td><input type="text" name="Email" value="" size="20" id="email"> <br> </td>
                 </tr>
                 <tr>
                     <td></td>
                     <td><span id="email_er_msg"></span></td>
                 </tr>
                 <tr>
-                    <td>Điện thoại</td>
-                    <td> <input type="text" name="phone" value="" size="20" id = "phone_number"> <br> </td>
+                    <th>Telephone</th>
+                    <td> <input type="text" name="phone" value="" size="20" id="phone_number"> <br> </td>
                 </tr>
                 <tr>
                     <td></td>
@@ -68,17 +68,17 @@
                     <td>
                     </td>
                     <td>
-                        <input type="button" name="bt" value="Đăng kí" onclick="insert()">
+                        <input type="button" name="bt" value="Register" onclick="insert()">
                     </td>
                 </tr>
             </table>
             <hr>
             <table border="1">
                 <th>MSV</th>
-                <th>Họ và tên </th>
-                <th>Địa chỉ Email </th>
-                <th>Số điện thoại </th>
-                <th>Thao tác </th>
+                <th>Surname </th>
+                <th>Email </th>
+                <th>Telephone </th>
+                <th>Action</th>
                 <tbody id="list">
                     <tr>
                         <td>1</td>
