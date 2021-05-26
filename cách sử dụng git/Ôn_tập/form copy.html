@@ -31,7 +31,7 @@
         <fieldset>
             <p style="background-color: turquoise; text-align: center; color: blue;"> <strong>ĐĂNG KÍ HỌC VIÊN</strong>
             </p><br>
-            <table>
+            <table id = "table">
                 <tr>
                     <th>MSV</th>
                     <td><input type="text" name="ma_sv" value="" size="15" id="student_code"> <br></td>
@@ -68,7 +68,7 @@
                     <td>
                     </td>
                     <td>
-                        <input type="button" name="bt" value="Register" onclick="insert()">
+                        <input type="button" name="bt" value="Register" onclick="addHtmlTableRow();">
                     </td>
                 </tr>
             </table>
@@ -86,16 +86,16 @@
                         <td>Nguyễn Văn A</td>
                         <td>ahoa@gmail.com</td>
                         <td>0987567243</td>
-                        <td><input type="button" name="bt" value="Edit" onclick="edit()"></td>
-                        <td>Delete</td>
+                        <td><input type="button" name="bt" value="Edit" onclick="edit()" id ="btn_edit"></td>
+                        <td><input type="button" name="bt" value="Delete" onclick="Delete()" id ="btn_delete"></td>
                     </tr>
                     <tr>
                         <td>2</td>
                         <td>Nguyễn Văn B</td>
                         <td>bhoa@gmail.com</td>
                         <td>0987567001</td>
-                        <td>Edit</td>
-                        <td>Delete</td>
+                        <td><input type="button" name="bt" value="Edit" onclick="edit()"></td>
+                        <td><input type="button" name="bt" value="Delete" onclick="Delete()"></td>
                     </tr>
                 </tbody>
             </table>
