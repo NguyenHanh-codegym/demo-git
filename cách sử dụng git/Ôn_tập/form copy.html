@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng kí học viên</title>
+    <style>
+        title {
+            text-align: center;
+        }
+
+        fieldset {
+            width: 50%;
+            height: 1000px;
+            margin-left: 22%;
+            background-color: burlywood;
+            color: blue;
+        }
+
+        input[type=text]:focus {
+            background-color: lightblue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="register.html" name="dangkihocvienForm" method="POST" onsubmit="return validateForm()">
+        <fieldset>
+            <p style="background-color: turquoise; text-align: center; color: blue;"> <strong>ĐĂNG KÍ HỌC VIÊN</strong>
+            </p><br>
+            <table>
+                <tr>
+                    <th>MSV</th>
+                    <td><input type="text" name="ma_sv" value="" size="15" id="student_code"> <br></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="msv_er_msg"></span></td>
+                </tr>
+                <tr>
+                    <th> Surname</th>
+                    <td> <input type="text" name="h&t" value="" size="30" id="surname"> <br></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="surname_er_msg"></span></td>
+                </tr>
+                <tr>
+                    <th>Email </th>
+                    <td><input type="text" name="Email" value="" size="20" id="email"> <br> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="email_er_msg"></span></td>
+                </tr>
+                <tr>
+                    <th>Telephone</th>
+                    <td> <input type="text" name="phone" value="" size="20" id="phone_number"> <br> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span id="phone_er_msg"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="button" name="bt" value="Register" onclick="insert()">
+                    </td>
+                </tr>
+            </table>
+            <hr>
+            <table border="1">
+                <th>MSV</th>
+                <th>Surname </th>
+                <th>Email </th>
+                <th>Telephone </th>
+                <th>Edit</th>
+                <th>Delete</th>
+                <tbody id="list">
+                    <tr>
+                        <td>1</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>ahoa@gmail.com</td>
+                        <td>0987567243</td>
+                        <td><input type="button" name="bt" value="Edit" onclick="edit()"></td>
+                        <td>Delete</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Nguyễn Văn B</td>
+                        <td>bhoa@gmail.com</td>
+                        <td>0987567001</td>
+                        <td>Edit</td>
+                        <td>Delete</td>
+                    </tr>
+                </tbody>
+            </table>
+            <script src="xuly1.js">
+            </script>
+</body>
+
+</html>
