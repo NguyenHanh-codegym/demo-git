@@ -25,3 +25,41 @@ function addHtmlTableRow() {
 
 };
 
+function validate() {
+
+    let status;
+    if (student_code.value.length < 1) {
+        document.getElementById("msv_er_msg").innerHTML =
+            "Please enter your student code";
+        status = false;
+    } else {
+        document.getElementById("msv_er_msg").innerHTML =
+            " ";
+        status = true;
+    }
+    if (surname.value.length < 1) {
+        document.getElementById("surname_er_msg").innerHTML =
+            "Please enter your Surname ";
+        status = false;
+    } else {
+        document.getElementById("surname_er_msg").innerHTML =
+            " ";
+    }
+    if (email.value.length < 1) {
+        document.getElementById("email_er_msg").innerHTML =
+            "Please enter your Email ";
+        status = false;
+    } else {
+        document.getElementById("email_er_msg").innerHTML =
+            " ";
+    }
+    if (phone_number.value.length < 1) {
+        document.getElementById("phone_er_msg").innerHTML =
+            "Please enter your Phone ";
+        status = false;
+    } else {
+        document.getElementById("surname_er_msg").innerHTML =
+            " ";
+    }
+    return status;
+}
