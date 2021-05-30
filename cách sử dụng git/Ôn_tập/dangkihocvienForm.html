@@ -7,40 +7,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Đăng kí học viên</title>
     <style>
-        title {
-            text-align: center;
-        }
-
         fieldset {
-            width: 50%;
-            height: 1000px;
-            margin-left: 22%;
-            background-color: burlywood;
-            color: blue;
+            border-collapse: collapse;
+            margin: 0px auto;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            width: 600px;
         }
 
         input[type=text]:focus {
             background-color: lightblue;
         }
+
+        .error {
+            margin: 0;
+            color: red;
+            text-align: left;
+            margin-top: 5px;
+        }
+
+        .error
     </style>
 
 </head>
 
 <body>
     <form action="register.html" name="dangkihocvienForm" method="POST" onsubmit="return validateForm()">
-        <input type="hidden"  id = "updateIndex">
+        <input type="hidden" id="updateIndex">
         <fieldset>
-            <p style="background-color: crimson;; text-align: center; color: blue;"> <strong>STUDETNS
-                    MANAGEMENT</strong>
+            <p style="background-color: darkslateblue; text-align: left;color: cornsilk;"> <strong>Students
+                    Management</strong>
             </p><br>
             <table>
                 <tr>
                     <th>MSV</th>
-                    <td><input type="text" name="ma_sv" value="" size="15" id="student_code"> <br></td>
+                    <td><input type="text" name="ma_sv" value="" size="30" id="student_code"> <br></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><span id="msv_er_msg"></span></td>
+                    <td><span class="error" id="msv_er_msg"></span></td>
                 </tr>
                 <tr>
                     <th> Surname</th>
@@ -48,23 +53,23 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td><span id="surname_er_msg"></span></td>
+                    <td><span class="error" id="surname_er_msg"></span></td>
                 </tr>
                 <tr>
                     <th>Email </th>
-                    <td><input type="text" name="Email" value="" size="20" id="email"> <br> </td>
+                    <td><input type="text" name="Email" value="" size="30" id="email"> <br> </td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><span id="email_er_msg"></span></td>
+                    <td><span class="error" id="email_er_msg"></span></td>
                 </tr>
                 <tr>
                     <th>Telephone</th>
-                    <td> <input type="text" name="phone" value="" size="20" id="phone_number"> <br> </td>
+                    <td> <input type="text" name="phone" value="" size="30" id="phone_number"> <br> </td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td><span id="phone_er_msg"></span></td>
+                    <td><span class="error" id="phone_er_msg"></span></td>
                 </tr>
                 <tr>
                     <td>
@@ -77,15 +82,15 @@
                 </tr>
             </table>
             <hr>
-            <p style="background-color: crimson; text-align: center; color: blue;"> <strong>Registered Students
+            <p style="background-color: darkslateblue; text-align: left;color: cornsilk;"> <strong>Registered Students
                     List</strong>
-            <table border="1">
-                    <th>MSV</th>
-                    <th>Surname </th>
-                    <th>Email </th>
-                    <th>Telephone </th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+            <table border=" 1">
+                <th>MSV</th>
+                <th>Surname </th>
+                <th>Email </th>
+                <th>Telephone </th>
+                <th>Edit</th>
+                <th>Delete</th>
                 <tbody id="list">
                     <tr>
                         <td>1</td>
@@ -104,7 +109,7 @@
                         <td>Nguyễn Văn B</td>
                         <td>bhoa@gmail.com</td>
                         <td>0987567001</td>
-                        <td >Edit</td>
+                        <td>Edit</td>
                         <td>Delete</td>
                     </tr>
                 </tbody>
