@@ -23,11 +23,12 @@
             background-color: lightblue;
         }
     </style>
-    
+
 </head>
 
 <body>
     <form action="register.html" name="dangkihocvienForm" method="POST" onsubmit="return validateForm()">
+        <input type="hidden"  id = "updateIndex">
         <fieldset>
             <p style="background-color: crimson;; text-align: center; color: blue;"> <strong>STUDETNS
                     MANAGEMENT</strong>
@@ -71,7 +72,7 @@
                     <td>
                         <input type="button" name="bt" value="Register" onclick="insert()" id="btn_register">
                         <input style="background-color: green;display: none;" type="button" value="Update"
-                            id="btn_update">
+                            id="btn_update" onclick="updateStudent(0)">
                     </td>
                 </tr>
             </table>
@@ -79,12 +80,12 @@
             <p style="background-color: crimson; text-align: center; color: blue;"> <strong>Registered Students
                     List</strong>
             <table border="1">
-                <th>MSV</th>
-                <th>Surname </th>
-                <th>Email </th>
-                <th>Telephone </th>
-                <th>Edit</th>
-                <th>Delete</th>
+                    <th>MSV</th>
+                    <th>Surname </th>
+                    <th>Email </th>
+                    <th>Telephone </th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 <tbody id="list">
                     <tr>
                         <td>1</td>
@@ -92,12 +93,10 @@
                         <td>ahoa@gmail.com</td>
                         <td>0987567243</td>
                         <td>
-                            <input style="color: green;cursor: pointer;" type="button" value="Edit"
-                                onclick="SelectedRowtoInputEdit(0)">
+                            <input style="color: green;cursor: pointer;" type="button" value="Edit">
                         </td>
                         <td>
-                            <input style="color: red; cursor: pointer;" type="button" value="Delete"
-                                onclick="SelectedRowtoInputDelete(0)">
+                            <input style="color: red; cursor: pointer;" type="button" value="Delete">
                         </td>
                     </tr>
                     <tr>
@@ -105,7 +104,7 @@
                         <td>Nguyễn Văn B</td>
                         <td>bhoa@gmail.com</td>
                         <td>0987567001</td>
-                        <td type="button">Edit</td>
+                        <td >Edit</td>
                         <td>Delete</td>
                     </tr>
                 </tbody>
