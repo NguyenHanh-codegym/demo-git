@@ -26,13 +26,21 @@
             margin-top: 5px;
         }
 
-        .error
+        .btn_delete {
+            color: red;
+            cursor: pointer;
+        }
+
+        .btn_edit {
+            color: green;
+            cursor: pointer;
+        }
     </style>
 
 </head>
 
 <body>
-    <form action="register.html" name="dangkihocvienForm" method="POST" onsubmit="return validateForm()">
+    <form action="register.html" name="dangkihocvienForm" method="POST" onsubmit="return validate()">
         <input type="hidden" id="updateIndex">
         <fieldset>
             <p style="background-color: darkslateblue; text-align: left;color: cornsilk;"> <strong>Students
@@ -92,26 +100,6 @@
                 <th>Edit</th>
                 <th>Delete</th>
                 <tbody id="list">
-                    <tr>
-                        <td>1</td>
-                        <td>Nguyễn Văn A</td>
-                        <td>ahoa@gmail.com</td>
-                        <td>0987567243</td>
-                        <td>
-                            <input style="color: green;cursor: pointer;" type="button" value="Edit">
-                        </td>
-                        <td>
-                            <input style="color: red; cursor: pointer;" type="button" value="Delete">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Nguyễn Văn B</td>
-                        <td>bhoa@gmail.com</td>
-                        <td>0987567001</td>
-                        <td>Edit</td>
-                        <td>Delete</td>
-                    </tr>
                 </tbody>
             </table>
             <script src="xuly.js">
