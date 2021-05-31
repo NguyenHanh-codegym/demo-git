@@ -49,6 +49,11 @@ function insert() {
 function validate() {
 
     let status;
+    let student_code    = document.getElementById('student_code');
+    let surname         = document.getElementById('surname');
+    let phone_number    = document.getElementById('phone_number');
+    let email           = document.getElementById('email');
+    
     if (student_code.value.length < 1) {
         document.getElementById("msv_er_msg").innerHTML =
             "Please enter your student code";
